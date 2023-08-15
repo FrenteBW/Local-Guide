@@ -6,13 +6,74 @@
 //
 
 import SwiftUI
+import BWTextField
 
 struct LoginView: View {
+    @State private var email = ""
+    @State private var password = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        NavigationView {
+            ZStack {
+                Color("background")
+                .edgesIgnoringSafeArea(.all)
+                
+                VStack {
+                    Spacer()
+                    Text("Login")
+                        .foregroundColor(.gray)
+                        .font(.system(size: 35, weight: .semibold))
+                    
+                    VStack(spacing: 20) {
+                        BWTextField(imageName: "person.circle", placeholderText: "Write your ID", isSecureField: false, text: $email)
+                            .padding([.top, .leading, .trailing])
 
-#Preview {
-    LoginView()
+                        BWTextField(imageName: "person.circle", placeholderText: "Write your Password", isSecureField: true, text: $password)
+                            .padding([.bottom, .leading, .trailing])
+                    }
+                    
+                    HStack {
+                        Spacer()
+                        
+                        NavigationLink(
+                            destination: ResetPasswordView(),
+                            label: {
+                            Text("Forgot password?")
+                                .font(.system(size: 13, weight: .semibold))
+                                .foregroundColor(.gray)
+                                .padding(.top)
+                                .padding(.trailing, 20)
+                        })
+                    }
+                    
+                    Button(action: {
+                        
+                    }, label: {
+                        Text("Sign In")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(width: 360, height: 50)
+                            .background(Color.gray)
+                            .clipShape(Capsule())
+                            .padding()
+                    })
+                    
+                    Spacer()
+                    
+                    NavigationLink(
+                        destination: RegistrationView().navigationBarHidden(true), label: {
+                            HStack {
+                                Text("Don't have an account")
+                                    .font(.system(size: 14))
+                                
+                                Text("Sign up")
+                                    .font(.system(size: 14, weight: .semibold))
+                            }.foregroundColor(.gray)
+                        }).padding(.bottom, 16)
+                    
+                }
+                .padding(.top, -44)
+            }
+        }
+    }
 }

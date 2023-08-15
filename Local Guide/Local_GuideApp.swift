@@ -11,7 +11,7 @@ import SwiftUI
 struct Local_GuideApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }

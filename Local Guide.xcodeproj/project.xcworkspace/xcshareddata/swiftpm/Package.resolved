@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "bwtextfield",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/FrenteBW/BWTextField.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "38d325d2dfb179a7ffab5e3f79e68662f64a01ac"
+      }
+    }
+  ],
+  "version" : 2
+}

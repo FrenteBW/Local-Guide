@@ -11,6 +11,9 @@
 		7A584EC82A8B3DFD0057536F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A584EC72A8B3DFD0057536F /* ContentView.swift */; };
 		7A584ECA2A8B3E020057536F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A584EC92A8B3E020057536F /* Assets.xcassets */; };
 		7A584ECD2A8B3E020057536F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A584ECC2A8B3E020057536F /* Preview Assets.xcassets */; };
+		7A584ED52A8B3F180057536F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A584ED42A8B3F180057536F /* ImagePicker.swift */; };
+		7A584ED72A8B3F970057536F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A584ED62A8B3F970057536F /* LoginView.swift */; };
+		7A584EDA2A8B3FED0057536F /* BWTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 7A584ED92A8B3FED0057536F /* BWTextField */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		7A584EC72A8B3DFD0057536F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7A584EC92A8B3E020057536F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A584ECC2A8B3E020057536F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7A584ED42A8B3F180057536F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		7A584ED62A8B3F970057536F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A584EDA2A8B3FED0057536F /* BWTextField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +57,12 @@
 		7A584EC42A8B3DFD0057536F /* Local Guide */ = {
 			isa = PBXGroup;
 			children = (
+				7A584ED32A8B3F090057536F /* Utils */,
 				7A584EC52A8B3DFD0057536F /* Local_GuideApp.swift */,
 				7A584EC72A8B3DFD0057536F /* ContentView.swift */,
 				7A584EC92A8B3E020057536F /* Assets.xcassets */,
 				7A584ECB2A8B3E020057536F /* Preview Content */,
+				7A584ED62A8B3F970057536F /* LoginView.swift */,
 			);
 			path = "Local Guide";
 			sourceTree = "<group>";
@@ -65,6 +73,14 @@
 				7A584ECC2A8B3E020057536F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7A584ED32A8B3F090057536F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7A584ED42A8B3F180057536F /* ImagePicker.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +99,9 @@
 			dependencies = (
 			);
 			name = "Local Guide";
+			packageProductDependencies = (
+				7A584ED92A8B3FED0057536F /* BWTextField */,
+			);
 			productName = "Local Guide";
 			productReference = 7A584EC22A8B3DFD0057536F /* Local Guide.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +130,9 @@
 				Base,
 			);
 			mainGroup = 7A584EB92A8B3DFD0057536F;
+			packageReferences = (
+				7A584ED82A8B3FED0057536F /* XCRemoteSwiftPackageReference "BWTextField" */,
+			);
 			productRefGroup = 7A584EC32A8B3DFD0057536F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A584ED52A8B3F180057536F /* ImagePicker.swift in Sources */,
 				7A584EC82A8B3DFD0057536F /* ContentView.swift in Sources */,
+				7A584ED72A8B3F970057536F /* LoginView.swift in Sources */,
 				7A584EC62A8B3DFD0057536F /* Local_GuideApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7A584ED82A8B3FED0057536F /* XCRemoteSwiftPackageReference "BWTextField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FrenteBW/BWTextField.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A584ED92A8B3FED0057536F /* BWTextField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A584ED82A8B3FED0057536F /* XCRemoteSwiftPackageReference "BWTextField" */;
+			productName = BWTextField;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7A584EBA2A8B3DFD0057536F /* Project object */;
 }
