@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selectedIndex = 1
     var body: some View {
-        VStack {
-            Text("Hello, world!")
-        }
-        .padding()
+        MainTabView(selectedIndex: $selectedIndex)
     }
 }

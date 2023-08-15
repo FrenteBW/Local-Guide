@@ -8,9 +8,10 @@
 import SwiftUI
 
 @main
-struct Local_GuideApp: App {
+struct Local_guideApp: App {
     var body: some Scene {
         WindowGroup {
+            //ContentView()
             LoginView()
         }
     }
