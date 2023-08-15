@@ -9,7 +9,14 @@ import SwiftUI
 
 struct FeedView: View {
     var body: some View {
-        Text("FeedView")
+        ScrollView {
+            LazyVStack {
+                ForEach(0..<15) { _ in
+                    FeedCell()
+                        .padding([.top, .leading, .trailing])
+                }
+            }
+        }
     }
 }
 

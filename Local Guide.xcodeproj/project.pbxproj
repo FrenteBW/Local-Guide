@@ -24,6 +24,7 @@
 		7A584EF42A8B42100057536F /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A584EF32A8B42100057536F /* FeedView.swift */; };
 		7A584EF72A8B423D0057536F /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A584EF62A8B423D0057536F /* RegistrationView.swift */; };
 		7A584EF92A8B425B0057536F /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A584EF82A8B425B0057536F /* ResetPasswordView.swift */; };
+		7A584EFB2A8B475D0057536F /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A584EFA2A8B475D0057536F /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		7A584EF32A8B42100057536F /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		7A584EF62A8B423D0057536F /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		7A584EF82A8B425B0057536F /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		7A584EFA2A8B475D0057536F /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 		7A584EF22A8B42020057536F /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				7A584EFA2A8B475D0057536F /* FeedCell.swift */,
 				7A584EF32A8B42100057536F /* FeedView.swift */,
 			);
 			path = Feed;
@@ -288,6 +291,7 @@
 				7A584EF12A8B41E10057536F /* MainTabView.swift in Sources */,
 				7A584EC62A8B3DFD0057536F /* Local_GuideApp.swift in Sources */,
 				7A584EEC2A8B41A60057536F /* UserCell.swift in Sources */,
+				7A584EFB2A8B475D0057536F /* FeedCell.swift in Sources */,
 				7A584EE92A8B417B0057536F /* UploadPostView.swift in Sources */,
 				7A584EE42A8B41350057536F /* NotificationView.swift in Sources */,
 				7A584EE62A8B41470057536F /* NotificationCell.swift in Sources */,
@@ -432,6 +436,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,6 +466,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
