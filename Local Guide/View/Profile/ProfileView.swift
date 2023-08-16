@@ -8,8 +8,28 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
     var body: some View {
-        Text("Profile View")
+        VStack {
+            ProfileHeaderView()
+            //ProfileBadge()
+            
+            Divider()
+            Text("Your Posts")
+                .font(.system(size: 20, weight: .semibold))
+                .foregroundColor(.gray)
+                .padding([.top])
+            Divider()
+                
+            ScrollView {
+                LazyVStack {
+                    ForEach(0..<15) { _ in
+                        ProfileCell()
+                        Divider()
+                    }
+                }
+            }
+        }.padding(.top)
     }
 }
 
