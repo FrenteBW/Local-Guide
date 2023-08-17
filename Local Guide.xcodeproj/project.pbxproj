@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A21CD6E2A8DE1FA002CD67A /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21CD6D2A8DE1FA002CD67A /* TextArea.swift */; };
 		7A3357042A8C91310066BFB2 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3357032A8C91310066BFB2 /* ProfileHeaderView.swift */; };
 		7A3357062A8C94560066BFB2 /* ProfileBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3357052A8C94560066BFB2 /* ProfileBadge.swift */; };
 		7A3357082A8C9F570066BFB2 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3357072A8C9F570066BFB2 /* ProfileCell.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A21CD6D2A8DE1FA002CD67A /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		7A3357032A8C91310066BFB2 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		7A3357052A8C94560066BFB2 /* ProfileBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBadge.swift; sourceTree = "<group>"; };
 		7A3357072A8C9F570066BFB2 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				7A584ED42A8B3F180057536F /* ImagePicker.swift */,
+				7A21CD6D2A8DE1FA002CD67A /* TextArea.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			files = (
 				7A584ED52A8B3F180057536F /* ImagePicker.swift in Sources */,
 				7A584EEE2A8B41B90057536F /* UserListView.swift in Sources */,
+				7A21CD6E2A8DE1FA002CD67A /* TextArea.swift in Sources */,
 				7A584EC82A8B3DFD0057536F /* ContentView.swift in Sources */,
 				7A584EF92A8B425B0057536F /* ResetPasswordView.swift in Sources */,
 				7A584EF72A8B423D0057536F /* RegistrationView.swift in Sources */,
