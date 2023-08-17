@@ -25,7 +25,7 @@ struct UploadPostView: View {
                         .frame(width: 180, height: 180)
                         .clipped()
                         .padding(.top, 56)
-                        .foregroundColor(.black)
+                        .foregroundColor(.blue)
                 }).sheet(isPresented: $imagePickerPresented, onDismiss: loadImage, content: { ImagePicker(image: $selectedImage)
                 })
             } else if let image = postImage {
@@ -36,12 +36,14 @@ struct UploadPostView: View {
                         .frame(width: 96, height: 96)
                         .clipped()
                     
-                    //TextField("Enter your caption...", text: $captionText)
+                    Divider()
+                        .frame(maxHeight: 150)
+                    
                     TextArea(text: $captionText, placeholder: "Enter your caption...")
-                        .frame(height: 200)
-                }.padding()
+                        .frame(height: 150)
+                }.padding([.top, .leading,. trailing])
                 
-                HStack(spacing: 16) {
+                HStack(spacing: 15) {
                     
                     Button(action: {
                         captionText = ""
@@ -50,7 +52,7 @@ struct UploadPostView: View {
                         Text("Cancel")
                             .font(.system(size:16, weight:.semibold))
                             .frame(width: 172, height: 50)
-                            .background(Color.red)
+                            .background(Color.gray)
                             .cornerRadius(5)
                             .foregroundColor(.white)
                     })
@@ -61,11 +63,16 @@ struct UploadPostView: View {
                         Text("Share")
                             .font(.system(size:16, weight:.semibold))
                             .frame(width: 172, height: 50)
-                            .background(Color.blue)
+                            .background(Color.gray)
                             .cornerRadius(5)
                             .foregroundColor(.white)
                     })
                 }.padding()
+                
+                Divider()
+                
+                Text("When you upload a post, the user's current location will automatically appear as a map with the post.")
+                    .padding()
             }
             
             Spacer()

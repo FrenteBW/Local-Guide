@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A21CD6E2A8DE1FA002CD67A /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21CD6D2A8DE1FA002CD67A /* TextArea.swift */; };
+		7A21CD702A8DFB95002CD67A /* BadgeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21CD6F2A8DFB95002CD67A /* BadgeDescription.swift */; };
 		7A3357042A8C91310066BFB2 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3357032A8C91310066BFB2 /* ProfileHeaderView.swift */; };
 		7A3357062A8C94560066BFB2 /* ProfileBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3357052A8C94560066BFB2 /* ProfileBadge.swift */; };
 		7A3357082A8C9F570066BFB2 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3357072A8C9F570066BFB2 /* ProfileCell.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		7A21CD6D2A8DE1FA002CD67A /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
+		7A21CD6F2A8DFB95002CD67A /* BadgeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDescription.swift; sourceTree = "<group>"; };
 		7A3357032A8C91310066BFB2 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		7A3357052A8C94560066BFB2 /* ProfileBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBadge.swift; sourceTree = "<group>"; };
 		7A3357072A8C9F570066BFB2 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				7A3357032A8C91310066BFB2 /* ProfileHeaderView.swift */,
 				7A3357052A8C94560066BFB2 /* ProfileBadge.swift */,
 				7A3357072A8C9F570066BFB2 /* ProfileCell.swift */,
+				7A21CD6F2A8DFB95002CD67A /* BadgeDescription.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				7A3357042A8C91310066BFB2 /* ProfileHeaderView.swift in Sources */,
 				7A584ED72A8B3F970057536F /* LoginView.swift in Sources */,
 				7A584EF12A8B41E10057536F /* MainTabView.swift in Sources */,
+				7A21CD702A8DFB95002CD67A /* BadgeDescription.swift in Sources */,
 				7A584EC62A8B3DFD0057536F /* Local_GuideApp.swift in Sources */,
 				7A584EEC2A8B41A60057536F /* UserCell.swift in Sources */,
 				7A584EFB2A8B475D0057536F /* FeedCell.swift in Sources */,

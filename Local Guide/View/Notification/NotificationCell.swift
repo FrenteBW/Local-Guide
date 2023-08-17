@@ -17,8 +17,8 @@ struct NotificationCell: View {
                 .clipShape(Circle())
                     
             Text("Byungwook An").font(.system(size: 14, weight: .semibold))
-            Text("Harin like your post").font(.system(size: 15))
-            Text(" 2d").foregroundColor(.gray).font(.system(size: 12))
+            Text("Harin likes your post").font(.system(size: 15))
+            Text(" 3m").foregroundColor(.gray).font(.system(size: 12))
         }
     }
 }
