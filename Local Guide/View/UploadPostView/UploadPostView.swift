@@ -28,6 +28,12 @@ struct UploadPostView: View {
                         .foregroundColor(.blue)
                 }).sheet(isPresented: $imagePickerPresented, onDismiss: loadImage, content: { ImagePicker(image: $selectedImage)
                 })
+                Text("Upload your new post!")
+                    .font(.title2)
+                    .bold()
+                    .foregroundColor(.blue)
+                    .padding()
+                    
             } else if let image = postImage {
                 HStack(alignment: .top) {
                     image

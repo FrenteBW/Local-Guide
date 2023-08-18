@@ -11,9 +11,19 @@ struct ProfileBadge: View {
     @State var BadgePresented = false
     var body: some View {
         Button(action: { BadgePresented.toggle() }, label: {
-            Text("Local guide🙋‍♂️")
-                .font(.system(size: 18, weight: .semibold))
-                .foregroundColor(.blue)
+            ZStack {
+                Circle()
+                    .opacity(0.3)
+                    .foregroundColor(.orange)
+                    .frame(width: 50, height: 50)
+                VStack {
+                    Text("🙋‍♂️")
+                        .font(.system(size: 20))
+                    Text("Local guide")
+                        .font(.system(size: 6, weight: .semibold))
+                        .foregroundColor(.blue)
+                }
+            }
         }).sheet(isPresented: $BadgePresented, content: { BadgeDescription() }
         )}
 }

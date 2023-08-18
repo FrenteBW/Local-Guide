@@ -19,16 +19,17 @@ struct ProfileHeaderView: View {
             VStack(alignment: .leading){
                 Text("FrenteBW")
                     .font(.system(size: 25, weight: .semibold))
-                    .padding([.leading, .top])
-                
-                Text("Byungwook An")
-                    .font(.system(size:15))
                     .padding(.leading)
                 
-                ProfileBadge()
+                Text("Byungwook An")
+                    .font(.system(size:15, weight: .medium))
+                    .foregroundColor(.gray)
                     .padding(.leading)
             }
             
-        }.padding(.trailing, 100) //수정 필요
+            ProfileBadge()
+            Spacer()
+        }
+        .padding(.leading)
     }
 }
