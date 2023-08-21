@@ -27,4 +27,3 @@ struct ProfileBadge: View {
         }).sheet(isPresented: $BadgePresented, content: { BadgeDescription() }
         )}
 }
-

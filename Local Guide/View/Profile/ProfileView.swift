@@ -12,7 +12,6 @@ struct ProfileView: View {
     var body: some View {
         VStack {
             ProfileHeaderView()
-            //ProfileBadge()
             
             Divider()
             Text("Your Posts")
