@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
     @State var selectedIndex = 0
     
     var body: some View {
-        //if locationDataManager.authorizationStatus == .authorizedWhenInUse {
-            MainTabView(selectedIndex: $selectedIndex)
-        //}
+        Group {
+            if viewModel.userSession == nil {
+                LoginView()
+            } else {
+                MainTabView(selectedIndex: $selectedIndex)
+            }
+        }
     }
 }

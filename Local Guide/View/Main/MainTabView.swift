@@ -64,6 +64,7 @@ struct MainTabView: View {
         
         var logoutButton: some View {
             Button {
+                AuthViewModel.shared.signout() //AuthViewModel에 접근하는 다른 방법(shared이용)
             } label: {
                 Text("Logout").foregroundColor(.black)
             }
