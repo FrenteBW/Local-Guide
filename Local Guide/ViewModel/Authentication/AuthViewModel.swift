@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 
 class AuthViewModel: ObservableObject {
+    
     @Published var userSession: FirebaseAuth.User? //얘가 nil이면, ContentView에서 Login View로 넘어감
     
     static let shared = AuthViewModel() // 어디서든 AuthViewModel에 접근하도록
@@ -26,7 +27,7 @@ class AuthViewModel: ObservableObject {
                 
                 guard let user = result?.user else { return }
                 self.userSession = user
-                print("Sucessfully Login")
+                print("Sucessfully Login...")
                 //self.fetchUser()
             }
         }
