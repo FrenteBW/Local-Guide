@@ -74,7 +74,7 @@ struct RegistrationView: View {
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(width: 360, height: 50)
-                        .background(Color.gray)
+                        .background(Color.blue)
                         .clipShape(Capsule())
                         .padding()
                 })

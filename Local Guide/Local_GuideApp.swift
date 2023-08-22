@@ -17,8 +17,8 @@ struct Local_guideApp: App {
     
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-            LoginView().environmentObject(AuthViewModel.shared)
+            //LoginView()
+            ContentView().environmentObject(AuthViewModel.shared)
         }
     }
 }
