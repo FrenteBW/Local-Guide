@@ -16,6 +16,7 @@ struct LocationFeedView: View {
                 ForEach(0..<15) { _ in
                     FeedCell()
                         .padding([.top, .leading, .trailing])
+                    
                     switch locationDataManager.locationManager.authorizationStatus {
                                 case .authorizedWhenInUse:  // Location services are available.
                                     // Insert code here of what should happen when Location services are authorized

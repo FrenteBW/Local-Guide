@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct UserListView: View {
+    @ObservedObject var viewModel: SearchViewModel
+    
     var body: some View {
         ScrollView {
             LazyVStack {
-                ForEach(0..<15) { _ in
+                ForEach(viewModel.users) { _ in
                     UserCell()
                         .padding([.top, .leading, .trailing])
                 }

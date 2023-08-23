@@ -34,6 +34,10 @@
 		7AAC88862A935BA9000DD403 /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAC88852A935BA9000DD403 /* LocationDataManager.swift */; };
 		7AD8EB2E2A94743C00C9B31C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8EB2D2A94743C00C9B31C /* AuthViewModel.swift */; };
 		7AD8EB302A94864000C9B31C /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8EB2F2A94864000C9B31C /* ImageUploader.swift */; };
+		7AFB5E7F2A95D7C4002210FE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB5E7E2A95D7C4002210FE /* Constants.swift */; };
+		7AFB5E812A95D98A002210FE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB5E802A95D98A002210FE /* User.swift */; };
+		7AFB5E832A95DC23002210FE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB5E822A95DC23002210FE /* SearchViewModel.swift */; };
+		7AFB5E852A95E83A002210FE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB5E842A95E83A002210FE /* SearchView.swift */; };
 		7AFDF9922A933BD7000A1746 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7AFDF9912A933BD7000A1746 /* FirebaseAuth */; };
 		7AFDF9942A933BD7000A1746 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 7AFDF9932A933BD7000A1746 /* FirebaseAuthCombine-Community */; };
 		7AFDF9962A933BD7000A1746 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7AFDF9952A933BD7000A1746 /* FirebaseFirestore */; };
@@ -76,6 +80,10 @@
 		7AAC88852A935BA9000DD403 /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
 		7AD8EB2D2A94743C00C9B31C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		7AD8EB2F2A94864000C9B31C /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		7AFB5E7E2A95D7C4002210FE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7AFB5E802A95D98A002210FE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7AFB5E822A95DC23002210FE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		7AFB5E842A95E83A002210FE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		7AFDF9A72A933DBF000A1746 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -146,6 +154,7 @@
 			children = (
 				7A584ED42A8B3F180057536F /* ImagePicker.swift */,
 				7A21CD6D2A8DE1FA002CD67A /* TextArea.swift */,
+				7AFB5E7E2A95D7C4002210FE /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -162,6 +171,7 @@
 		7A584EDC2A8B40A80057536F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7AFB5E802A95D98A002210FE /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				7AD8EB2C2A94742200C9B31C /* Authentication */,
+				7AFB5E822A95DC23002210FE /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -222,6 +233,7 @@
 			children = (
 				7A584EEB2A8B41A60057536F /* UserCell.swift */,
 				7A584EED2A8B41B90057536F /* UserListView.swift */,
+				7AFB5E842A95E83A002210FE /* SearchView.swift */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
@@ -354,10 +366,13 @@
 				7A584ED52A8B3F180057536F /* ImagePicker.swift in Sources */,
 				7A584EEE2A8B41B90057536F /* UserListView.swift in Sources */,
 				7AD8EB302A94864000C9B31C /* ImageUploader.swift in Sources */,
+				7AFB5E852A95E83A002210FE /* SearchView.swift in Sources */,
 				7A21CD6E2A8DE1FA002CD67A /* TextArea.swift in Sources */,
 				7A3DE3382A8F393600028CFB /* LocationFeedView.swift in Sources */,
+				7AFB5E812A95D98A002210FE /* User.swift in Sources */,
 				7A584EC82A8B3DFD0057536F /* ContentView.swift in Sources */,
 				7A584EF92A8B425B0057536F /* ResetPasswordView.swift in Sources */,
+				7AFB5E7F2A95D7C4002210FE /* Constants.swift in Sources */,
 				7A3DE3362A8F382B00028CFB /* FeedRootView.swift in Sources */,
 				7A584EF72A8B423D0057536F /* RegistrationView.swift in Sources */,
 				7A584EE12A8B40CD0057536F /* ProfileView.swift in Sources */,
@@ -371,6 +386,7 @@
 				7A584EFB2A8B475D0057536F /* FeedCell.swift in Sources */,
 				7A584EE92A8B417B0057536F /* UploadPostView.swift in Sources */,
 				7AAC88862A935BA9000DD403 /* LocationDataManager.swift in Sources */,
+				7AFB5E832A95DC23002210FE /* SearchViewModel.swift in Sources */,
 				7A3357082A8C9F570066BFB2 /* ProfileCell.swift in Sources */,
 				7AD8EB2E2A94743C00C9B31C /* AuthViewModel.swift in Sources */,
 				7A584EE42A8B41350057536F /* NotificationView.swift in Sources */,

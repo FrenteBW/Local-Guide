@@ -22,7 +22,7 @@ struct MainTabView: View {
                             Image(systemName: "house")
                         }.tag(0)
                     
-                    UserListView()
+                    SearchView()
                         .onTapGesture {
                             selectedIndex = 1
                         }
