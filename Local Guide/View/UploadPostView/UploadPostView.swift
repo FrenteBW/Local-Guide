@@ -15,6 +15,10 @@ struct UploadPostView: View {
     //@Binding var tabIndex: Int
     @ObservedObject var viewModel = UploadPostViewModel()
     
+    //추가
+    @StateObject private var locationDataManager = LocationDataManager()
+    @StateObject private var uploadViewModel = UploadPostViewModel()
+    
     var body: some View {
         VStack {
             if postImage == nil {
@@ -66,7 +70,11 @@ struct UploadPostView: View {
                     
                     Button(action: {
                         if let image = selectedImage {
-                            viewModel.upload(caption: captionText, image: image)
+                            //추가
+                            let latitude = locationDataManager.locationManager.location?.coordinate.latitude ?? 0
+                            let longitude = locationDataManager.locationManager.location?.coordinate.longitude ?? 0
+                            //추가
+                            viewModel.upload(caption: captionText, image: image, latitude: latitude, longitude: longitude)
                         }
                     }, label: {
                         Text("Share")
