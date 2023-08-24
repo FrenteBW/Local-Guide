@@ -40,7 +40,6 @@ struct FeedCell: View {
                 Map(coordinateRegion: $region)
                     .frame(width: 340, height: 220, alignment: .center)
                     
-                
             //하트 + 말풍선
                 HStack(spacing: 16) {
                     Button(action: {}, label: {
