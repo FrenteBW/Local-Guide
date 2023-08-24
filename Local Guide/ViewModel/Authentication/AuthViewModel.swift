@@ -10,6 +10,7 @@ import Firebase
 
 class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User? //얘가 nil이면, ContentView에서 Login View로 넘어감
+    @Published var currentUser: User?
     
     static let shared = AuthViewModel() // 어디서든 AuthViewModel에 접근하도록
     
@@ -28,7 +29,7 @@ class AuthViewModel: ObservableObject {
                 guard let user = result?.user else { return }
                 self.userSession = user
                 print("Sucessfully Login...")
-                //self.fetchUser()
+                self.fetchUser()
             }
         }
 
@@ -55,7 +56,7 @@ class AuthViewModel: ObservableObject {
                     COLLECTION_USERS.document(user.uid).setData(data) { _ in //database에 데이터 업로드
                         print("Successfully uploaded user data...")
                         self.userSession = user
-                        //self.fetchUser()
+                        self.fetchUser()
                     }
                 }
             }
@@ -74,7 +75,7 @@ class AuthViewModel: ObservableObject {
         guard let uid = userSession?.uid else { return }
         COLLECTION_USERS.document(uid).getDocument { snapshot, _ in //Firebase Database에 접근하는 root
             guard let user = try? snapshot?.data(as: User.self) else { return }
-            print("DEBUG: User is \(user)")
+            self.currentUser = user
         }
     }
 }

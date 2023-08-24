@@ -16,7 +16,9 @@ struct ContentView: View {
             if viewModel.userSession == nil {
                 LoginView()
             } else {
-                MainTabView(selectedIndex: $selectedIndex)
+                if let user = viewModel.currentUser {
+                    MainTabView(user: user, selectedIndex: $selectedIndex)
+                }
             }
         }
     }

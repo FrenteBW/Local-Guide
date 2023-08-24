@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct MainTabView: View {
-    //let user: User
+    let user: User
+    
     @Binding var selectedIndex: Int
     
     var body: some View {
@@ -47,13 +48,15 @@ struct MainTabView: View {
                             Image(systemName: "heart")
                         }.tag(3)
                     
-                    ProfileView()
+                    
+                    ProfileView(user: user)
                         .onTapGesture {
                             selectedIndex = 4
                         }
                         .tabItem {
                             Image(systemName: "person")
                         }.tag(4)
+                     
                 }
                 .navigationTitle(tabTitle)
                 .navigationBarTitleDisplayMode(.inline)
