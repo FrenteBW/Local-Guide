@@ -1,5 +1,5 @@
 //
-//  FeedViewModel.swift
+//  FeedViewLikeModel.swift
 //  Local Guide
 //
 //  Created by 안병욱의 mac on 2023/08/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class FeedViewModel: ObservableObject {
+class FeedViewLikeModel: ObservableObject {
     @Published var posts = [Post]()
     
     init() {
@@ -15,7 +15,7 @@ class FeedViewModel: ObservableObject {
     }
     
     func fetchPosts() {
-        COLLECTION_POSTS.order(by: "timestamp", descending: true).getDocuments { snapshot, _ in 
+        COLLECTION_POSTS.order(by: "likes", descending: true).getDocuments { snapshot, _ in 
             guard let documents = snapshot?.documents else { return }
             self.posts = documents.compactMap({ try? $0.data(as: Post.self) })
             
@@ -23,3 +23,4 @@ class FeedViewModel: ObservableObject {
         }
     }
 }
+

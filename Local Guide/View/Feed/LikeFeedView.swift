@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LikeFeedView: View {
     
-    @ObservedObject var viewModel = FeedViewModel()
+    @ObservedObject var viewModel = FeedViewLikeModel()
     
     var body: some View {
         ScrollView {
