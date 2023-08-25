@@ -7,8 +7,11 @@
 
 import SwiftUI
 import MapKit
+import Kingfisher
 
 struct FeedCell: View {
+    
+    let post: Post
 
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.321258544921875, longitude: 127.12713440293922), span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002))
     
@@ -18,20 +21,20 @@ struct FeedCell: View {
             
             //게시자 프로필 사진 + ID
                 HStack {
-                    Image("IMG_0119")
+                    KFImage(URL(string: post.ownerImageUrl))
                         .resizable()
                         .scaledToFill()
                         .frame(width: 36, height: 36)
                         .clipped()
                         .cornerRadius(18)
                     
-                    Text("FrenteBW")
+                    Text(post.ownerUserName)
                         .font(.system(size: 14, weight: .semibold))
                 }
                 .padding([.leading, .bottom], 5)
             
-            //게시글 이미지
-                Image("IMG_0119")
+                //게시글 이미지
+                KFImage(URL(string: post.imageUrl))
                     .resizable()
                     .scaledToFill()
                     .frame(width: 340, height: 220, alignment: .center)
@@ -64,17 +67,17 @@ struct FeedCell: View {
                 .foregroundColor(.black)
             
             //라이크, 코멘트, 날짜
-                Text("50 Likes")
+            Text("\(post.likes) likes")
                     .font(.system(size: 14, weight: .semibold))
                     .padding(.leading, 8)
                     .padding(.bottom, 2)
                 
                 HStack {
-                    Text("FrenteBW").font(.system(size: 14, weight: .semibold))
-                    Text("Amazing EQ kuala lumpur!").font(.system(size: 15))
+                    Text(post.ownerUserName).font(.system(size: 14, weight: .semibold))
+                    Text("\(post.caption)").font(.system(size: 15))
                 }.padding(.horizontal, 8)
                 
-                Text("3d")
+                Text("2d")
                     .font(.system(size: 14))
                     .foregroundColor(.gray)
                     .padding(.leading, 8)
