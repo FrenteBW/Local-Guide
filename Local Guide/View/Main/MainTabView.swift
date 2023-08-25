@@ -31,8 +31,7 @@ struct MainTabView: View {
                             Image(systemName: "person.3")
                         }.tag(1)
                     
-                    //UploadPostView(tabIndex: $selectedIndex)
-                    UploadPostView()
+                    UploadPostView(tabIndex: $selectedIndex)
                         .onTapGesture {
                             selectedIndex = 2
                         }

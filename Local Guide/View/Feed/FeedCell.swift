@@ -10,7 +10,7 @@ import MapKit
 
 struct FeedCell: View {
 
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.5666791, longitude: 126.9782914), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.321258544921875, longitude: 127.12713440293922), span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002))
     
     var body: some View {
         

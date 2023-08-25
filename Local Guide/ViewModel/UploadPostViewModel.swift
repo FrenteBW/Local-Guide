@@ -10,7 +10,7 @@ import Firebase
 
 class UploadPostViewModel: ObservableObject {
     
-    func upload(caption: String, image: UIImage, latitude: Double, longitude: Double) {
+    func upload(caption: String, image: UIImage, latitude: Double, longitude: Double, completion: FirestoreCompletion) {
         guard let user = AuthViewModel.shared.currentUser else { return }
         
         ImageUploader.uploadImage(image: image, type: .post) { imageUrl in
@@ -26,7 +26,7 @@ class UploadPostViewModel: ObservableObject {
                                 "longitude": longitude
                     ] as [String: Any]
                     
-                    COLLECTION_POSTS.addDocument(data: data)
+            COLLECTION_POSTS.addDocument(data: data, completion: completion)
 
                 }
             }

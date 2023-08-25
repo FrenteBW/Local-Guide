@@ -12,7 +12,7 @@ struct UploadPostView: View {
     @State var postImage: Image?
     @State var captionText = ""
     @State var imagePickerPresented = false
-    //@Binding var tabIndex: Int
+    @Binding var tabIndex: Int
     @ObservedObject var viewModel = UploadPostViewModel()
     
     //추가
@@ -74,7 +74,11 @@ struct UploadPostView: View {
                             let latitude = locationDataManager.locationManager.location?.coordinate.latitude ?? 0
                             let longitude = locationDataManager.locationManager.location?.coordinate.longitude ?? 0
                             //추가
-                            viewModel.upload(caption: captionText, image: image, latitude: latitude, longitude: longitude)
+                            viewModel.upload(caption: captionText, image: image, latitude: latitude, longitude: longitude) { _ in
+                                captionText = ""
+                                postImage = nil
+                                tabIndex = 0
+                            }
                         }
                     }, label: {
                         Text("Share")
