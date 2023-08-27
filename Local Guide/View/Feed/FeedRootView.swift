@@ -14,16 +14,16 @@ struct FeedRootView: View {
     var body: some View {
         VStack {
                     Picker(selection: $selectedSegment, label: Text("")) {
-                        Text("Recent").tag(0)
-                        Text("Popular").tag(1)
+                        Text("Popular").tag(0)
+                        Text("recent").tag(1)
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     .padding()
                     
                     if selectedSegment == 0 {
-                        LocationFeedView()
-                    } else {
                         LikeFeedView()
+                    } else {
+                        LocationFeedView()
                     }
                 }
     }
