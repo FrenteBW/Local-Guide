@@ -14,7 +14,7 @@ struct FeedRootView: View {
     var body: some View {
         VStack {
                     Picker(selection: $selectedSegment, label: Text("")) {
-                        Text("Nearby").tag(0)
+                        Text("Recent").tag(0)
                         Text("Popular").tag(1)
                     }
                     .pickerStyle(SegmentedPickerStyle())

@@ -13,7 +13,7 @@ struct FeedCell: View {
     
     let post: Post
 
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.321258544921875, longitude: 127.12713440293922), span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002))
+    //@State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.3212890625, longitude: 127.12713440293922), span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002))
     
     var body: some View {
         
@@ -40,7 +40,8 @@ struct FeedCell: View {
                     .frame(width: 340, height: 220, alignment: .center)
                     .clipped()
             
-                Map(coordinateRegion: $region)
+                //Map(coordinateRegion: $region)
+                MapView(coordinate: CLLocationCoordinate2D(latitude: post.latitude, longitude: post.longitude))
                     .frame(width: 340, height: 220, alignment: .center)
                     
             //하트 + 말풍선
@@ -85,4 +86,3 @@ struct FeedCell: View {
         }
     }
 }
-

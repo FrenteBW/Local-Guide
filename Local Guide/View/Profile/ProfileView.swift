@@ -32,4 +32,3 @@ struct ProfileView: View {
         }.padding(.top)
     }
 }
-
