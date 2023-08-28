@@ -37,12 +37,12 @@ struct FeedCell: View {
                 KFImage(URL(string: post.imageUrl))
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 340, height: 220, alignment: .center)
+                    .frame(width: 340, height: 300, alignment: .center)
                     .clipped()
             
                 //Map(coordinateRegion: $region)
                 MapView(coordinate: CLLocationCoordinate2D(latitude: post.latitude, longitude: post.longitude))
-                    .frame(width: 340, height: 220, alignment: .center)
+                    .frame(width: 340, height: 140, alignment: .center)
                     
             //하트 + 말풍선
                 HStack(spacing: 16) {

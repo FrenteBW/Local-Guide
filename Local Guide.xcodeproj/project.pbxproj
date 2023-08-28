@@ -11,7 +11,7 @@
 		7A21CD702A8DFB95002CD67A /* BadgeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21CD6F2A8DFB95002CD67A /* BadgeDescription.swift */; };
 		7A3357042A8C91310066BFB2 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3357032A8C91310066BFB2 /* ProfileHeaderView.swift */; };
 		7A3357062A8C94560066BFB2 /* ProfileBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3357052A8C94560066BFB2 /* ProfileBadge.swift */; };
-		7A3357082A8C9F570066BFB2 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3357072A8C9F570066BFB2 /* ProfileCell.swift */; };
+		7A3357082A8C9F570066BFB2 /* ProfileCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3357072A8C9F570066BFB2 /* ProfileCellView.swift */; };
 		7A3DE3362A8F382B00028CFB /* FeedRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3DE3352A8F382B00028CFB /* FeedRootView.swift */; };
 		7A3DE3382A8F393600028CFB /* LocationFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3DE3372A8F393600028CFB /* LocationFeedView.swift */; };
 		7A3DE33A2A8F395600028CFB /* LikeFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3DE3392A8F395600028CFB /* LikeFeedView.swift */; };
@@ -63,7 +63,7 @@
 		7A21CD6F2A8DFB95002CD67A /* BadgeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDescription.swift; sourceTree = "<group>"; };
 		7A3357032A8C91310066BFB2 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		7A3357052A8C94560066BFB2 /* ProfileBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBadge.swift; sourceTree = "<group>"; };
-		7A3357072A8C9F570066BFB2 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		7A3357072A8C9F570066BFB2 /* ProfileCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellView.swift; sourceTree = "<group>"; };
 		7A3DE3352A8F382B00028CFB /* FeedRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRootView.swift; sourceTree = "<group>"; };
 		7A3DE3372A8F393600028CFB /* LocationFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFeedView.swift; sourceTree = "<group>"; };
 		7A3DE3392A8F395600028CFB /* LikeFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeFeedView.swift; sourceTree = "<group>"; };
@@ -224,7 +224,7 @@
 				7A584EE02A8B40CD0057536F /* ProfileView.swift */,
 				7A3357032A8C91310066BFB2 /* ProfileHeaderView.swift */,
 				7A3357052A8C94560066BFB2 /* ProfileBadge.swift */,
-				7A3357072A8C9F570066BFB2 /* ProfileCell.swift */,
+				7A3357072A8C9F570066BFB2 /* ProfileCellView.swift */,
 				7A21CD6F2A8DFB95002CD67A /* BadgeDescription.swift */,
 			);
 			path = Profile;
@@ -421,7 +421,7 @@
 				7AD6565A2A98759C00A05366 /* FeedViewLikeModel.swift in Sources */,
 				7AAC88862A935BA9000DD403 /* LocationDataManager.swift in Sources */,
 				7AFB5E832A95DC23002210FE /* SearchViewModel.swift in Sources */,
-				7A3357082A8C9F570066BFB2 /* ProfileCell.swift in Sources */,
+				7A3357082A8C9F570066BFB2 /* ProfileCellView.swift in Sources */,
 				7AD8EB2E2A94743C00C9B31C /* AuthViewModel.swift in Sources */,
 				7A584EE42A8B41350057536F /* NotificationView.swift in Sources */,
 				7AD6565C2A987CA600A05366 /* ProfileCellViewModel.swift in Sources */,

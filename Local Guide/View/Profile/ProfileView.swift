@@ -20,15 +20,8 @@ struct ProfileView: View {
                 .foregroundColor(.gray)
                 .padding([.top])
             Divider()
-                
-            ScrollView {
-                LazyVStack {
-                    ForEach(0..<15) { _ in
-                        ProfileCell()
-                        Divider()
-                    }
-                }
-            }
+
+            ProfileCellView(config: .profile(user.id ?? ""))
         }.padding(.top)
     }
 }
