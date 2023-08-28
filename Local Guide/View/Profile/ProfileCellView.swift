@@ -22,25 +22,29 @@ struct ProfileCellView: View {
         ScrollView {
             LazyVStack {
                 ForEach(viewModel.posts) { post in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(post.ownerUserName)
-                                .font(.system(size: 15, weight: .semibold))
-                            
-                            Text(post.caption)
-                                .font(.system(size: 15))
+                    NavigationLink(
+                        destination: FeedCell(viewModel: FeedCellViewModel(post: post)),
+                        label: {
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text(post.ownerUserName)
+                                        .font(.system(size: 15, weight: .semibold))
+                                    
+                                    Text(post.caption)
+                                        .font(.system(size: 15))
+                                }
+                                
+                                Spacer()
+                                
+                                KFImage(URL(string: post.imageUrl))
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 48, height: 48)
+                                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                            }
+                            .padding([.leading, .trailing])
                         }
-                        
-                        Spacer()
-                        
-                        KFImage(URL(string: post.imageUrl))
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 48, height: 48)
-                            .clipShape(RoundedRectangle(cornerRadius: 5))
-                    }
-                    .padding([.leading, .trailing])
-                }
+                 )}
             }
         }
     }
