@@ -11,7 +11,13 @@ import Kingfisher
 
 struct FeedCell: View {
     
-    let post: Post
+    @ObservedObject var viewModel: FeedCellViewModel
+    
+    var didLike: Bool { return viewModel.post.didLike ?? false }
+    
+    init(viewModel: FeedCellViewModel) {
+        self.viewModel = viewModel
+    }
 
     //@State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.3212890625, longitude: 127.12713440293922), span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002))
     
@@ -21,35 +27,38 @@ struct FeedCell: View {
             
             //게시자 프로필 사진 + ID
                 HStack {
-                    KFImage(URL(string: post.ownerImageUrl))
+                    KFImage(URL(string: viewModel.post.ownerImageUrl))
                         .resizable()
                         .scaledToFill()
                         .frame(width: 36, height: 36)
                         .clipped()
                         .cornerRadius(18)
                     
-                    Text(post.ownerUserName)
+                    Text(viewModel.post.ownerUserName)
                         .font(.system(size: 14, weight: .semibold))
                 }
                 .padding([.leading, .bottom], 5)
             
                 //게시글 이미지
-                KFImage(URL(string: post.imageUrl))
+            KFImage(URL(string: viewModel.post.imageUrl))
                     .resizable()
                     .scaledToFill()
                     .frame(width: 340, height: 300, alignment: .center)
                     .clipped()
             
                 //Map(coordinateRegion: $region)
-                MapView(coordinate: CLLocationCoordinate2D(latitude: post.latitude, longitude: post.longitude))
+            MapView(coordinate: CLLocationCoordinate2D(latitude: viewModel.post.latitude, longitude: viewModel.post.longitude))
                     .frame(width: 340, height: 140, alignment: .center)
                     
             //하트 + 말풍선
                 HStack(spacing: 16) {
-                    Button(action: {}, label: {
-                        Image(systemName:"heart.fill")
+                    Button(action: {
+                        didLike ? viewModel.unlike() : viewModel.like()
+                    }, label: {
+                        Image(systemName:didLike ? "heart.fill" : "heart")
                             .resizable()
                             .scaledToFill()
+                            .foregroundColor(didLike ? .red : .black)
                             .frame(width: 20, height: 20)
                             .font(.system(size: 20))
                             .padding(4)
@@ -68,14 +77,14 @@ struct FeedCell: View {
                 .foregroundColor(.black)
             
             //라이크, 코멘트, 날짜
-            Text("\(post.likes) likes")
+            Text(viewModel.likeString)
                     .font(.system(size: 14, weight: .semibold))
                     .padding(.leading, 8)
                     .padding(.bottom, 2)
                 
                 HStack {
-                    Text(post.ownerUserName).font(.system(size: 14, weight: .semibold))
-                    Text("\(post.caption)").font(.system(size: 15))
+                    Text(viewModel.post.ownerUserName).font(.system(size: 14, weight: .semibold))
+                    Text("\(viewModel.post.caption)").font(.system(size: 15))
                 }.padding(.horizontal, 8)
                 
                 Text("2d")

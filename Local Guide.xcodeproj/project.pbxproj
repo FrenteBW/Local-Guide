@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A21CC842A9C6BA600718E89 /* FeedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21CC832A9C6BA600718E89 /* FeedCellViewModel.swift */; };
 		7A21CD6E2A8DE1FA002CD67A /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21CD6D2A8DE1FA002CD67A /* TextArea.swift */; };
 		7A21CD702A8DFB95002CD67A /* BadgeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21CD6F2A8DFB95002CD67A /* BadgeDescription.swift */; };
 		7A3357042A8C91310066BFB2 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3357032A8C91310066BFB2 /* ProfileHeaderView.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A21CC832A9C6BA600718E89 /* FeedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellViewModel.swift; sourceTree = "<group>"; };
 		7A21CD6D2A8DE1FA002CD67A /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		7A21CD6F2A8DFB95002CD67A /* BadgeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDescription.swift; sourceTree = "<group>"; };
 		7A3357032A8C91310066BFB2 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			children = (
 				7AD656552A9870EA00A05366 /* FeedViewModel.swift */,
 				7AD656592A98759C00A05366 /* FeedViewLikeModel.swift */,
+				7A21CC832A9C6BA600718E89 /* FeedCellViewModel.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				7A21CD702A8DFB95002CD67A /* BadgeDescription.swift in Sources */,
 				7A584EC62A8B3DFD0057536F /* Local_GuideApp.swift in Sources */,
 				7A584EEC2A8B41A60057536F /* UserCell.swift in Sources */,
+				7A21CC842A9C6BA600718E89 /* FeedCellViewModel.swift in Sources */,
 				7A584EFB2A8B475D0057536F /* FeedCell.swift in Sources */,
 				7A584EE92A8B417B0057536F /* UploadPostView.swift in Sources */,
 				7A590F2A2A9AE482009C112B /* MapView.swift in Sources */,
