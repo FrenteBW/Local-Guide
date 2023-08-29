@@ -12,6 +12,7 @@
 		7A1F42D82A9DABF6000FCD8D /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F42D72A9DABF6000FCD8D /* CommentViewModel.swift */; };
 		7A1F42DA2A9DAC2A000FCD8D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F42D92A9DAC2A000FCD8D /* Comment.swift */; };
 		7A1F42DC2A9DAF3C000FCD8D /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F42DB2A9DAF3C000FCD8D /* CustomInputView.swift */; };
+		7A1F42DE2A9DB615000FCD8D /* FeedBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F42DD2A9DB615000FCD8D /* FeedBadge.swift */; };
 		7A21CC842A9C6BA600718E89 /* FeedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21CC832A9C6BA600718E89 /* FeedCellViewModel.swift */; };
 		7A21CD6E2A8DE1FA002CD67A /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21CD6D2A8DE1FA002CD67A /* TextArea.swift */; };
 		7A21CD702A8DFB95002CD67A /* BadgeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21CD6F2A8DFB95002CD67A /* BadgeDescription.swift */; };
@@ -70,6 +71,7 @@
 		7A1F42D72A9DABF6000FCD8D /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		7A1F42D92A9DAC2A000FCD8D /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		7A1F42DB2A9DAF3C000FCD8D /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
+		7A1F42DD2A9DB615000FCD8D /* FeedBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBadge.swift; sourceTree = "<group>"; };
 		7A21CC832A9C6BA600718E89 /* FeedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellViewModel.swift; sourceTree = "<group>"; };
 		7A21CD6D2A8DE1FA002CD67A /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		7A21CD6F2A8DFB95002CD67A /* BadgeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDescription.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				7A3DE3372A8F393600028CFB /* LocationFeedView.swift */,
 				7A3DE3392A8F395600028CFB /* LikeFeedView.swift */,
 				7A590F292A9AE482009C112B /* MapView.swift */,
+				7A1F42DD2A9DB615000FCD8D /* FeedBadge.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				7A584EF12A8B41E10057536F /* MainTabView.swift in Sources */,
 				7A21CD702A8DFB95002CD67A /* BadgeDescription.swift in Sources */,
 				7A584EC62A8B3DFD0057536F /* Local_GuideApp.swift in Sources */,
+				7A1F42DE2A9DB615000FCD8D /* FeedBadge.swift in Sources */,
 				7A584EEC2A8B41A60057536F /* UserCell.swift in Sources */,
 				7A21CC842A9C6BA600718E89 /* FeedCellViewModel.swift in Sources */,
 				7A584EFB2A8B475D0057536F /* FeedCell.swift in Sources */,

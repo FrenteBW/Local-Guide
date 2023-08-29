@@ -47,8 +47,14 @@ struct FeedCell: View {
                     .clipped()
             
                 //Map(coordinateRegion: $region)
-            MapView(coordinate: CLLocationCoordinate2D(latitude: viewModel.post.latitude, longitude: viewModel.post.longitude))
-                    .frame(width: 340, height: 120, alignment: .center)
+            HStack {
+                MapView(coordinate: CLLocationCoordinate2D(latitude: viewModel.post.latitude, longitude: viewModel.post.longitude))
+                    .frame(width: 240, height: 100, alignment: .center)
+                Spacer()
+                //추천 등급 랭킹 마크
+                FeedBadge()
+                    .frame(width: 80, height: 80, alignment: .center)
+            }
                     
             //하트 + 말풍선
             HStack(spacing: 16) {
