@@ -29,9 +29,12 @@ struct ProfileCellView: View {
                                 VStack(alignment: .leading) {
                                     Text(post.ownerUserName)
                                         .font(.system(size: 15, weight: .semibold))
+                                        .foregroundColor(.black)
                                     
                                     Text(post.caption)
                                         .font(.system(size: 15))
+                                        .lineLimit(1)
+                                        .foregroundColor(.black)
                                 }
                                 
                                 Spacer()

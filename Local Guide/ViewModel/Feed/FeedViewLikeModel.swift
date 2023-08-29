@@ -23,4 +23,3 @@ class FeedViewLikeModel: ObservableObject {
         }
     }
 }
-

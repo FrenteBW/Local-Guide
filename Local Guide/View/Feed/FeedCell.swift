@@ -48,34 +48,33 @@ struct FeedCell: View {
             
                 //Map(coordinateRegion: $region)
             MapView(coordinate: CLLocationCoordinate2D(latitude: viewModel.post.latitude, longitude: viewModel.post.longitude))
-                    .frame(width: 340, height: 140, alignment: .center)
+                    .frame(width: 340, height: 120, alignment: .center)
                     
             //하트 + 말풍선
-                HStack(spacing: 16) {
-                    Button(action: {
-                        didLike ? viewModel.unlike() : viewModel.like()
-                    }, label: {
-                        Image(systemName:didLike ? "heart.fill" : "heart")
-                            .resizable()
-                            .scaledToFill()
-                            .foregroundColor(didLike ? .red : .black)
-                            .frame(width: 20, height: 20)
-                            .font(.system(size: 20))
-                            .padding(4)
-                    })
-                    
-                    Button(action: {}, label: {
-                        Image(systemName: "bubble.right")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 20, height: 20)
-                            .font(.system(size: 20))
-                            .padding(4)
-                    })
+            HStack(spacing: 16) {
+                Button(action: {
+                    didLike ? viewModel.unlike() : viewModel.like()
+                }, label: {
+                    Image(systemName:didLike ? "heart.fill" : "heart")
+                        .resizable()
+                        .scaledToFill()
+                        .foregroundColor(didLike ? .red : .black)
+                        .frame(width: 20, height: 20)
+                        .font(.system(size: 20))
+                        .padding(4)
+                })
+                
+                NavigationLink(destination: CommentsView(post: viewModel.post)) {
+                    Image(systemName: "bubble.right")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 20, height: 20)
+                        .font(.system(size: 20))
+                        .padding(4)
                 }
                 .padding(.leading, 4)
                 .foregroundColor(.black)
-            
+            }
             //라이크, 코멘트, 날짜
             Text(viewModel.likeString)
                     .font(.system(size: 14, weight: .semibold))
@@ -85,6 +84,7 @@ struct FeedCell: View {
                 HStack {
                     Text(viewModel.post.ownerUserName).font(.system(size: 14, weight: .semibold))
                     Text("\(viewModel.post.caption)").font(.system(size: 15))
+                        .lineLimit(1)
                 }.padding(.horizontal, 8)
                 
                 Text("2d")
