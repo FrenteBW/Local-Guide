@@ -15,7 +15,7 @@ struct NotificationView: View {
             LazyVStack(spacing: 20) {
                 ForEach(viewModel.notifications) { notification in
                     NotificationCell(viewModel: NotificationCellViewModel(notification: notification))
-                        .padding([.top, .trailing])
+                        .padding([.top, .leading, .trailing])
                 }
             }
         }
