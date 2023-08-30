@@ -9,3 +9,4 @@ import Firebase
 
 let COLLECTION_USERS = Firestore.firestore().collection("users")
 let COLLECTION_POSTS = Firestore.firestore().collection("posts")
+let COLLECTION_NOTIFICATIONS = Firestore.firestore().collection("notification")

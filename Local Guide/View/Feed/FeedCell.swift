@@ -50,7 +50,7 @@ struct FeedCell: View {
             HStack {
                 MapView(coordinate: CLLocationCoordinate2D(latitude: viewModel.post.latitude, longitude: viewModel.post.longitude))
                     .frame(width: 240, height: 100, alignment: .center)
-                Spacer()
+                //Spacer()
                 //추천 등급 랭킹 마크
                 FeedBadge()
                     .frame(width: 80, height: 80, alignment: .center)

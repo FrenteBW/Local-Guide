@@ -34,7 +34,7 @@ class CommentViewModel: ObservableObject {
                 return
             }
             
-            //NotificationsViewModel.uploadNotification(toUid: self.post.ownerUid, type: .comment, post: self.post)
+            NotificationsViewModel.uploadNotification(toUid: self.post.ownerUid, type: .comment, post: self.post)
         }
     }
     
