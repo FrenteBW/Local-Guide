@@ -12,6 +12,7 @@ struct LocationFeedView: View {
     @ObservedObject var viewModel = FeedViewModel()
     
     var body: some View {
+
         ScrollView {
             LazyVStack {
                 ForEach(viewModel.posts) { post in

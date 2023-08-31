@@ -20,11 +20,4 @@ class SearchViewModel: ObservableObject {
             self.users = documents.compactMap({ try? $0.data(as: User.self) })
         }
     }
-    
-    /*
-    func filteredUsers(_ query: String) -> [User] { //검색창에 알파벳 입력 시 알파벳과 일치하는 사용자 나타냄
-        let lowercasedQuery = query.lowercased()
-        return users.filter({ $0.fullname.lowercased().contains(lowercasedQuery) || $0.username.contains(lowercasedQuery) })
-    }
-     */
 }
