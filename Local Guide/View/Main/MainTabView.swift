@@ -75,7 +75,7 @@ struct MainTabView: View {
         var tabTitle: String {
             switch selectedIndex {
             case 0: return "Feed"
-            case 1: return "UserList"
+            case 1: return "Local guide"
             case 2: return "New Post"
             case 3: return "Notifications"
             case 4: return "Profile"

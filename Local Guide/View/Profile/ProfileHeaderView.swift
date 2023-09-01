@@ -9,27 +9,30 @@ import SwiftUI
 import Kingfisher
 
 struct ProfileHeaderView: View {
-    let user: User
+    @ObservedObject var viewModel: ProfileViewModel
+
+    //let user: User
     var body: some View {
         HStack {
-            KFImage(URL(string: user.profileImageUrl))
+            KFImage(URL(string: viewModel.user.profileImageUrl))
                 .resizable()
                 .scaledToFill()
                 .frame(width: 100, height: 100)
                 .clipShape(Circle())
             
             VStack(alignment: .leading){
-                Text(user.username)
+                Text(viewModel.user.username)
                     .font(.system(size: 25, weight: .semibold))
                     .padding(.leading)
                 
-                Text(user.fullname)
+                Text(viewModel.user.fullname)
                     .font(.system(size:15, weight: .medium))
                     .foregroundColor(.gray)
                     .padding(.leading)
             }
-            
-            ProfileBadge()
+            if let stats = viewModel.user.stats {
+                ProfileBadge(value: stats.posts)
+            }
             Spacer()
         }
         .padding(.leading)

@@ -18,6 +18,8 @@ struct FeedCell: View {
     init(viewModel: FeedCellViewModel) {
         self.viewModel = viewModel
     }
+    
+    @State var BadgePresented = false
 
     //@State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.3212890625, longitude: 127.12713440293922), span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002))
     
@@ -48,11 +50,17 @@ struct FeedCell: View {
             
                 //Map(coordinateRegion: $region)
             HStack {
-                MapView(coordinate: CLLocationCoordinate2D(latitude: viewModel.post.latitude, longitude: viewModel.post.longitude))
+                //MapView(coordinate: CLLocationCoordinate2D(latitude: viewModel.post.latitude, longitude: viewModel.post.longitude))
+                
+                Button(action: { BadgePresented.toggle() }, label: {
+                    MapView(coordinate: CLLocationCoordinate2D(latitude: viewModel.post.latitude, longitude: viewModel.post.longitude))
+                }
+                ).sheet(isPresented: $BadgePresented, content: { WholeMapView(viewModel: viewModel) }
+                )
+                
                     .frame(width: 240, height: 100, alignment: .center)
-                //Spacer()
                 //추천 등급 랭킹 마크
-                FeedBadge()
+                FeedBadge(value: viewModel.post.likes)
                     .frame(width: 80, height: 80, alignment: .center)
             }
                     

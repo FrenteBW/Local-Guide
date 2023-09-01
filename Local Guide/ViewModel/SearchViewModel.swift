@@ -13,11 +13,14 @@ class SearchViewModel: ObservableObject {
     init() {
         fetchUsers()
     }
-    
+
     func fetchUsers() {
-        COLLECTION_USERS.getDocuments { snapshot, _ in //User Data 들 불러오기
-            guard let documents = snapshot?.documents else { return }
-            self.users = documents.compactMap({ try? $0.data(as: User.self) })
-        }
+        COLLECTION_USERS.getDocuments { snapshot, _ in
+                        guard let documents = snapshot?.documents else { return }
+                        self.users = documents.compactMap({ try? $0.data(as: User.self) })
+                    }
     }
+
 }
+
+

@@ -8,22 +8,29 @@
 import SwiftUI
 
 struct ProfileBadge: View {
+    
     @State var BadgePresented = false
+    let value: Int
+    
     var body: some View {
         Button(action: { BadgePresented.toggle() }, label: {
-            ZStack {
-                Circle()
-                    .opacity(0.3)
-                    .foregroundColor(.orange)
-                    .frame(width: 50, height: 50)
-                VStack {
-                    Text("🙋‍♂️")
-                        .font(.system(size: 20))
-                    Text("Local guide")
-                        .font(.system(size: 6, weight: .semibold))
-                        .foregroundColor(.blue)
+            if value >= 5 {
+                ZStack {
+                    Circle()
+                        .opacity(0.3)
+                        .foregroundColor(.pink)
+                        .frame(width: 50, height: 50)
+                    VStack {
+                        Text("🙋‍♂️")
+                            .font(.system(size: 20))
+                        Text("Local guide")
+                            .font(.system(size: 6, weight: .semibold))
+                            .foregroundColor(.blue)
+                    }
                 }
             }
-        }).sheet(isPresented: $BadgePresented, content: { BadgeDescription() }
+        }
+               
+        ).sheet(isPresented: $BadgePresented, content: { BadgeDescription() }
         )}
 }

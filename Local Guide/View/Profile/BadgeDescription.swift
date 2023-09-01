@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BadgeDescription: View {
     var body: some View {
-        Text(" 1. Local guide : Local guide is ... \n 2. Local king : Local king is ...\n")
+        Text(" 1. Local guide : Local guide is ... \n")
     }
 }
 

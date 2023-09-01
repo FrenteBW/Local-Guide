@@ -12,7 +12,7 @@ struct UserCell: View {
     let user: User
     
     var body: some View {
-        HStack {
+
             KFImage(URL(string: user.profileImageUrl))
                 .resizable()
                 .scaledToFill()
@@ -28,6 +28,5 @@ struct UserCell: View {
             }
             
             Spacer()
-        }
     }
 }

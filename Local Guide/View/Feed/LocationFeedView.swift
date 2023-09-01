@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LocationFeedView: View {
-    //@StateObject var locationDataManager = LocationDataManager()
     @ObservedObject var viewModel = FeedViewModel()
     
     var body: some View {
