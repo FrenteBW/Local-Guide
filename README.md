@@ -32,6 +32,53 @@
 
   위 부분에 대한 코드는 깃허브 링크 Read me에서 볼 수 있습니다.
 
+### 핵심코드
+    //현재 위치로부터 일정 거리 내에서 업로드된  Post filtering 하기
+    func fetchPosts(latitude: Double, longitude: Double) {
+        let radiusInKm = 0.1 
+
+        COLLECTION_POSTS.order(by: "timestamp", descending: true).getDocuments { snapshot, _ in
+            guard let documents = snapshot?.documents else { return }
+            
+            self.posts = documents.compactMap({ try? $0.data(as: Post.self) })
+                .filter { post in
+                    let postLocation = CLLocation(latitude: post.latitude, longitude: post.longitude)
+                    let userLocation = CLLocation(latitude: latitude, longitude: longitude)
+                    let distance = postLocation.distance(from: userLocation) / 1000 // Convert to km
+                    
+                    return distance <= radiusInKm
+                }
+            
+            //print(self.posts)
+        }
+    }
+
+    //위치 데이터를 함께 데이터베이스에 업로드 하기
+    func upload(caption: String, image: UIImage, latitude: Double, longitude: Double, completion: FirestoreCompletion) {
+        guard let user = AuthViewModel.shared.currentUser else { return }
+        
+        ImageUploader.uploadImage(image: image, type: .post) { imageUrl in
+                    let data = ["caption": caption,
+                                "timestamp": Timestamp(date: Date()),
+                                "likes": 0,
+                                "imageUrl": imageUrl,
+                                "ownerUid": user.id ?? "",
+                                "ownerImageUrl": user.profileImageUrl,
+                                "ownerUserName": user.username,
+                                //추가
+                                "latitude": latitude,
+                                "longitude": longitude
+                    ] as [String: Any]
+                    
+            COLLECTION_POSTS.addDocument(data: data, completion: completion)
+
+                }
+            }
+        }
+
+
+    
+
 ### 배운점
 
  Firebase를 이용해 사용자의 정보, Post의 정보 등의 데이터를 전송하고, Fetch 하는 방법을 배웠습니다. 
