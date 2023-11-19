@@ -48,8 +48,6 @@
                     
                     return distance <= radiusInKm
                 }
-            
-            //print(self.posts)
         }
     }
 
@@ -65,7 +63,7 @@
                                 "ownerUid": user.id ?? "",
                                 "ownerImageUrl": user.profileImageUrl,
                                 "ownerUserName": user.username,
-                                //추가
+                                //위치 정보 추가(latitude, longitude)
                                 "latitude": latitude,
                                 "longitude": longitude
                     ] as [String: Any]
