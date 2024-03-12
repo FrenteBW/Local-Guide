@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A1F42D42A9DAB7F000FCD8D /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F42D32A9DAB7F000FCD8D /* CommentCell.swift */; };
-		7A1F42D62A9DABA9000FCD8D /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F42D52A9DABA9000FCD8D /* CommentView.swift */; };
+		7A1F42D62A9DABA9000FCD8D /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F42D52A9DABA9000FCD8D /* CommentsView.swift */; };
 		7A1F42D82A9DABF6000FCD8D /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F42D72A9DABF6000FCD8D /* CommentViewModel.swift */; };
 		7A1F42DA2A9DAC2A000FCD8D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F42D92A9DAC2A000FCD8D /* Comment.swift */; };
 		7A1F42DC2A9DAF3C000FCD8D /* CustomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1F42DB2A9DAF3C000FCD8D /* CustomInputView.swift */; };
@@ -73,7 +73,7 @@
 
 /* Begin PBXFileReference section */
 		7A1F42D32A9DAB7F000FCD8D /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
-		7A1F42D52A9DABA9000FCD8D /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		7A1F42D52A9DABA9000FCD8D /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
 		7A1F42D72A9DABF6000FCD8D /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		7A1F42D92A9DAC2A000FCD8D /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		7A1F42DB2A9DAF3C000FCD8D /* CustomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputView.swift; sourceTree = "<group>"; };
@@ -160,8 +160,9 @@
 		7A1F42D22A9DAB66000FCD8D /* Comments */ = {
 			isa = PBXGroup;
 			children = (
+				7A1F42D52A9DABA9000FCD8D /* CommentsView.swift */,
 				7A1F42D32A9DAB7F000FCD8D /* CommentCell.swift */,
-				7A1F42D52A9DABA9000FCD8D /* CommentView.swift */,
+				7A1F42DB2A9DAF3C000FCD8D /* CustomInputView.swift */,
 			);
 			path = Comments;
 			sourceTree = "<group>";
@@ -263,7 +264,6 @@
 				7A584EDF2A8B40C20057536F /* Profile */,
 				7A584EEF2A8B41CE0057536F /* Main */,
 				7A584EF52A8B42270057536F /* Authentication */,
-				7A1F42DB2A9DAF3C000FCD8D /* CustomInputView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,10 +319,10 @@
 		7A584EF22A8B42020057536F /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				7A584EFA2A8B475D0057536F /* FeedCell.swift */,
 				7A3DE3352A8F382B00028CFB /* FeedRootView.swift */,
 				7A3DE3372A8F393600028CFB /* LocationFeedView.swift */,
 				7A3DE3392A8F395600028CFB /* LikeFeedView.swift */,
+				7A584EFA2A8B475D0057536F /* FeedCell.swift */,
 				7A590F292A9AE482009C112B /* MapView.swift */,
 				7A1F42DD2A9DB615000FCD8D /* FeedBadge.swift */,
 				7AB754122AA1CC8A00EC1EF7 /* WholeMapView.swift */,
@@ -492,7 +492,7 @@
 				7A584EFB2A8B475D0057536F /* FeedCell.swift in Sources */,
 				7A584EE92A8B417B0057536F /* UploadPostView.swift in Sources */,
 				7AB7540F2AA1BE1C00EC1EF7 /* UserStatView.swift in Sources */,
-				7A1F42D62A9DABA9000FCD8D /* CommentView.swift in Sources */,
+				7A1F42D62A9DABA9000FCD8D /* CommentsView.swift in Sources */,
 				7A590F2A2A9AE482009C112B /* MapView.swift in Sources */,
 				7AD6565A2A98759C00A05366 /* FeedViewLikeModel.swift in Sources */,
 				7AAC88862A935BA9000DD403 /* LocationDataManager.swift in Sources */,

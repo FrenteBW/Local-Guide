@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LocationFeedView: View {
+    
     @ObservedObject var viewModel = FeedViewModel()
     
     var body: some View {
@@ -22,4 +23,3 @@ struct LocationFeedView: View {
         }
     }
 }
-

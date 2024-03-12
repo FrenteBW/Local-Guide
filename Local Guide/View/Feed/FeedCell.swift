@@ -20,8 +20,6 @@ struct FeedCell: View {
     }
     
     @State var BadgePresented = false
-
-    //@State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.3212890625, longitude: 127.12713440293922), span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002))
     
     var body: some View {
         
@@ -48,9 +46,7 @@ struct FeedCell: View {
                     .frame(width: 340, height: 300, alignment: .center)
                     .clipped()
             
-                //Map(coordinateRegion: $region)
             HStack {
-                //MapView(coordinate: CLLocationCoordinate2D(latitude: viewModel.post.latitude, longitude: viewModel.post.longitude))
                 
                 Button(action: { BadgePresented.toggle() }, label: {
                     MapView(coordinate: CLLocationCoordinate2D(latitude: viewModel.post.latitude, longitude: viewModel.post.longitude))

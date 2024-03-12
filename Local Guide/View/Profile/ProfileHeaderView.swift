@@ -11,7 +11,6 @@ import Kingfisher
 struct ProfileHeaderView: View {
     @ObservedObject var viewModel: ProfileViewModel
 
-    //let user: User
     var body: some View {
         HStack {
             KFImage(URL(string: viewModel.user.profileImageUrl))

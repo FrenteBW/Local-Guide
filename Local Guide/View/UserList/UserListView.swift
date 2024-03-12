@@ -24,7 +24,6 @@ struct UserListView: View {
                             UserCell(user: user)
                                 .padding([.top, .leading, .trailing])
                         })
-                    
                 }
             }
         }

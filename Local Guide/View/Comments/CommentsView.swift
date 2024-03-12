@@ -29,6 +29,7 @@ struct CommentsView: View {
             CustomInputView(inputText: $commentText, action: uploadComment)
         }
     }
+
     func uploadComment() {
         viewModel.uploadComment(commentText: commentText)
         commentText = ""

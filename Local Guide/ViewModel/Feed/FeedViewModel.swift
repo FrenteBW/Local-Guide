@@ -30,9 +30,6 @@ class FeedViewModel: ObservableObject {
                     
                     return distance <= radiusInKm
                 }
-            
-            //print(self.posts)
         }
     }
 }
-

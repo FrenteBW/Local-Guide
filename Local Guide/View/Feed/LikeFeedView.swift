@@ -12,6 +12,7 @@ struct LikeFeedView: View {
     @ObservedObject var viewModel = FeedViewLikeModel()
     
     var body: some View {
+        
         ScrollView {
             LazyVStack {
                 ForEach(viewModel.posts) { post in

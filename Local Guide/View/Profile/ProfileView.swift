@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     let user: User
-    @ObservedObject var viewModel : ProfileViewModel
+    @ObservedObject var viewModel: ProfileViewModel
     
     init(user: User) {
             self.user = user

@@ -31,7 +31,7 @@ struct RegistrationView: View {
                     .foregroundColor(.gray)
                     .font(.system(size: 35, weight: .semibold))
                 ZStack {
-                    if let image = image {
+                    if let image = image { //초록색 글자 image가 null이 아니면
                         image
                             .resizable()
                             .scaledToFill()
